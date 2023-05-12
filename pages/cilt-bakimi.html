@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saç Bakımı | SiliCon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script async src="/js/myjs.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#"
+        ><img src="../images/logo.png" alt="" width="75"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+          <div class="other-navitems">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="./index.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="./cilt-bakimi.html"
+                >Cilt Bakımı</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Saç Bakımı</a>
+            </li>
+          </div>
+        </div>
+
+        <div class="navbar-right">
+          <div class="mini-basket">
+            <div class="nav-item dropdown float-right">
+              <a
+                class="nav-link basket text-light"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-auto-close="inside"
+              >
+                Sepet
+                <span id="no-items"></span>
+              </a>
+              <div class="dropdown-container">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <hr class="divider" />
+                  <div class="cart-total-div">
+                    Sepet Tutarı: <span class="cart-total"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-link favs text-light">Favorilerim</div>
+          <div class="nav-link user text-light">Giriş Yap</div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row" style="position: relative">
+        <!-- Breadcrumb Row -->
+        <div class="row">
+          <div class="col-md-6 breadcrumb">
+            <i class="fa-solid fa-house"></i> &nbsp;>&nbsp;
+            <span>Cilt Bakımı</span>
+          </div>
+          <div class="col-md-6 change-grid">
+            <div class="buttons">
+              <button class="grid-3">
+                <i class="fa-solid fa-3"></i> - grid
+              </button>
+              -
+              <button class="grid-4">
+                <i class="fa-solid fa-4"></i> - grid
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 filters">
+          <div class="row">
+            <!-- Ingredients Filter -->
+            <div class="col-md-12 ingredients">
+              <form action="#">
+                <h5>İçerik</h5>
+                <ul>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="arbutin"
+                      id="arbutin"
+                      value="arbutin"
+                    />
+                    <label for="arbutin">Arbutin</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="niacinamide"
+                      id="niacinamide"
+                      value="niacinamide"
+                    />
+                    <label for="niacinamide">Niacinamide</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="gycolic-acid"
+                      id="gycolic-acid"
+                      value="gycolic-acid"
+                    />
+                    <label for="gycolic-acid">Gycolic Acid</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="invisible-uv"
+                      id="invisible-uv"
+                      value="invisible-uv"
+                    />
+                    <label for="invisible-uv">Invisible UV</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="hyaluronic-acid"
+                      id="hyaluronic-acid"
+                      value="hyaluronic-acid"
+                    />
+                    <label for="hyaluronic-acid">Hyaluronic Acid</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="daily-moisturising"
+                      id="daily-moisturising"
+                      value="daily-moisturising"
+                    />
+                    <label for="daily-moisturising">Daily Moisturising</label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <!-- Brand Filter -->
+            <div class="col-md-12 brand">
+              <form action="">
+                <h5>Marka</h5>
+                <ul>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="purest-solutions"
+                      id="purest-solutions"
+                    />
+                    <label for="purest-solutions">The Purest Solutions</label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <button class="btn btn-success removeFilters">
+              Filtreleri Kaldır
+            </button>
+          </div>
+        </div>
+        <!-- Products -->
+        <div class="col-md-9">
+          <div class="row products-row">
+            <div class="product-category">
+              <div class="category"><h4 class="bold">Cilt Bakımı</h4></div>
+              <div class="items-found"></div>
+            </div>
+            <div class="modal fade" tabindex="-1" id="favModal" role="dialog">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Favorilere Eklendi!</h5>
+                    <button
+                      type="button"
+                      class="btn close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Ürün başarıyla favorilerine eklendi!</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Favorilerime Git
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Alışverişe Devam Et
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Sepete Eklendi!
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">Ürün sepetinize eklenmiştir.</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Sepete Git
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Alışverişe Devam Et
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product" data-category="gycolic-acid">
+              <div class="product-container">
+                <a href="#" class="image-container" onclick="return false;">
+                  <div class="position-relative">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0436/6152/5157/products/2_org_zoom_21526566-fd68-43e5-a4dc-f4ddab1588c4_360x.jpg?v=1679613011"
+                      alt=""
+                      width="300"
+                      height="400"
+                    />
+                    <div class="fav">
+                      <span data-toggle="modal" data-target="#favModal"
+                        ><i class="fa-xl fa-regular fa-heart"></i
+                      ></span>
+                    </div>
+                  </div>
+                </a>
+                <div class="product-detail">
+                  <a href="#" class="product-name"
+                    >The Purest Solutions %5 Gycolic Acid</a
+                  >
+                  <div class="price">399.99TL</div>
+                </div>
+                <button
+                  data-product-id="1"
+                  class="addcart w-100 btn btn-success"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  Sepete Ekle
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 product" data-category="arbutin">
+              <div class="product-container">
+                <a href="#" class="image-container">
+                  <div class="position-relative">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0436/6152/5157/products/2_org_zoom_b6ad9ac1-6991-4297-a417-9c941126e688_360x.jpg?v=1679613013%22"
+                      alt=""
+                      width="300"
+                      height="400"
+                      style="overflow: hidden"
+                    />
+                  </div>
+                </a>
+                <div class="product-detail">
+                  <a href="#" class="product-name"
+                    >The Purest Solutions Arbutin 2%</a
+                  >
+                  <div class="price">129.99TL</div>
+                </div>
+                <button
+                  data-product-id="2"
+                  class="addcart w-100 btn btn-success"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  Sepete Ekle
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 product" data-category="niacinamide">
+              <div class="product-container">
+                <a href="#" class="image-container">
+                  <div class="position-relative">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0436/6152/5157/products/2_org_zoom_c3ed626e-15b4-4271-967b-2e7908f81366_360x.jpg?v=1679613063"
+                      alt=""
+                      width="300"
+                      height="400"
+                    />
+                  </div>
+                </a>
+                <div class="product-detail">
+                  <a href="#" class="product-name"
+                    >The Purest Solutions Niacinamide 5%</a
+                  >
+                  <div class="price">299.99TL</div>
+                </div>
+                <button
+                  data-product-id="3"
+                  class="addcart btn btn-success w-100"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  Sepete Ekle
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 product" data-category="invisible-uv">
+              <div class="product-container">
+                <a href="#" class="image-container">
+                  <div class="position-relative">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0436/6152/5157/products/2_org_zoom_ade8a27f-9a5b-4d54-a4fe-234f966a1145_360x.jpg?v=1679613157"
+                      alt=""
+                      width="300"
+                      height="400"
+                      style="overflow: hidden"
+                    />
+                  </div>
+                </a>
+                <div class="product-detail">
+                  <a href="#" class="product-name"
+                    >The Purest Solutions - Invisible Uv</a
+                  >
+                  <div class="price">229.49TL</div>
+                </div>
+                <button
+                  data-product-id="2"
+                  class="addcart w-100 btn btn-success"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  Sepete Ekle
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 product" data-category="hyaluronic-acid">
+              <div class="product-container">
+                <a href="#" class="image-container">
+                  <div class="position-relative">
+                    <img
+                      src=" https://cdn.shopify.com/s/files/1/0436/6152/5157/products/1_org_zoom_733a0d40-c916-45c3-a4b4-1540df5c1e74_360x.jpg?v=1679613139"
+                      alt=""
+                      width="300"
+                      height="400"
+                      style="overflow: hidden"
+                    />
+                  </div>
+                </a>
+                <div class="product-detail">
+                  <a href="#" class="product-name"
+                    >The Purest Solutions Hyaluronic Acid</a
+                  >
+                  <div class="price">186.92TL</div>
+                </div>
+                <button
+                  data-product-id="2"
+                  class="addcart w-100 btn btn-success"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  Sepete Ekle
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 product" data-category="daily-moisturising">
+              <div class="product-container">
+                <a href="#" class="image-container">
+                  <div class="position-relative">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0436/6152/5157/products/2_org_zoom_b7672276-707d-485e-b9f4-9e490bfb7b4f_180x.jpg?v=1679613116"
+                      alt=""
+                      width="300"
+                      height="400"
+                      style="overflow: hidden"
+                    />
+                  </div>
+                </a>
+                <div class="product-detail">
+                  <a href="#" class="product-name"
+                    >Hydration Booster Daily Moisturizing</a
+                  >
+                  <div class="price">492.49TL</div>
+                </div>
+                <button
+                  data-product-id="2"
+                  class="addcart w-100 btn btn-success"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  Sepete Ekle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

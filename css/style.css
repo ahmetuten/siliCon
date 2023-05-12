@@ -1,0 +1,149 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding: 2svh;
+    border-bottom: 1px solid gray;
+}
+
+.container {
+    padding-top: 5svh;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.product-name  {
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    width: 300px;
+    font-size: 0.75rem;
+}
+
+.deleteItem {
+    background-color: transparent;
+    border: none;
+}
+
+.dropdown-menu.show {
+    display: flex;
+    padding: 2vh;
+    justify-content: space-between;
+    flex-direction: column;
+    top: 4svh;
+    right: 1svw;
+}
+
+.basketItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-total {
+    font-weight: bold;
+}
+
+.products-row {
+    padding-bottom: 3svh
+}
+
+.btn-success {
+    background-color: #5d3b4d;
+    border: none;
+}
+
+.btn-success:hover, .btn-success:active, .btn-success:visited, .btn-success:focus {
+    background-color: rgba(125, 1, 125, 0.715);
+}
+
+.basket {
+    align-self: flex-end;
+}
+
+.buttons button {
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.breadcrumb-and-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.other-navitems {
+    display: flex;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: space-between;
+}
+
+.navbar-right {
+    display: flex;
+}
+
+.user, .favs {
+    padding-left: 1svh;
+}
+
+.buttons {
+    float: right;
+}
+
+.filters ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    background-color: #5d3b4d;
+    /* yazıların rengini bs override ediyor */
+}
+
+.nav-link {
+    font-size: 1.25rem;
+}
+
+.navbar-right div{
+    padding-left: 2svh;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.fav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.image-container:hover {
+    transition: none;
+}

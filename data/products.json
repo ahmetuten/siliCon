@@ -1,0 +1,29 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "New Romantic Bride Gecelik",
+        "category": "Gecelik",
+        "brand": "XYZ",
+        "price": 399.99,
+        "image": "https://cdn-suwen.mncdn.com/mnresize/400/400/Content/Images/Originals/0020129_0.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Pansy Üst",
+        "category": "Gecelik",
+        "brand": "ABC",
+        "price": 129.99,
+        "image": "https://cdn-suwen.mncdn.com/mnresize/400/400/Content/Images/Originals/0020318_0.jpeg"
+      },
+      {
+        "id": 3,
+        "name": "New Romantic Bride Gecelik",
+        "category": "Gecelik",
+        "brand": "KLM",
+        "price": 299.99,
+        "image": "https://cdn-suwen.mncdn.com/mnresize/400/400/Content/Images/Originals/0020125_0.jpeg"
+      }
+    ]
+  }
+  
