@@ -39,7 +39,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href="/pages/index.html"
         ><img src="../images/logo.png" alt="" width="75"
       /></a>
       <button
@@ -80,7 +80,7 @@
                 role="button"
                 data-toggle="dropdown"
                 aria-expanded="false"
-                data-bs-auto-close="inside"
+                data-bs-auto-close="false"
               >
                 Sepet
                 <span id="no-items"></span>
@@ -454,7 +454,7 @@
         </div>
 
         <div class="row best-seller-products">
-          <div class="col-md-4 product" data-category="cilt-bakim">
+          <div class="col-md-4 product best-seller" data-category="cilt-bakim">
             <div class="product-container">
               <a href="#" class="image-container">
                 <div class="position-relative">
@@ -475,7 +475,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 product" data-category="cilt-bakim">
+          <div class="col-md-4 product best-seller" data-category="cilt-bakim">
             <div class="product-container">
               <a href="#" class="image-container">
                 <div class="position-relative">
@@ -496,7 +496,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 product" data-category="cilt-bakim">
+          <div class="col-md-4 product best-seller" data-category="cilt-bakim">
             <div class="product-container">
               <a href="#" class="image-container">
                 <div class="position-relative">
@@ -517,7 +517,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 product" data-category="sac-bakim">
+          <div class="col-md-4 product best-seller" data-category="sac-bakim">
             <div class="product-container">
               <a href="#" class="image-container">
                 <div class="position-relative">
@@ -538,7 +538,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 product" data-category="sac-bakim">
+          <div class="col-md-4 product best-seller" data-category="sac-bakim">
             <div class="product-container">
               <a href="#" class="image-container">
                 <div class="position-relative">
@@ -559,7 +559,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 product" data-category="sac-bakim">
+          <div class="col-md-4 product best-seller" data-category="sac-bakim">
             <div class="product-container">
               <a href="#" class="image-container">
                 <div class="position-relative">
@@ -580,7 +580,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 product" data-category="vucut-bakim">
+          <div class="col-md-4 product best-seller" data-category="vucut-bakim">
             <div class="product-container">
               <a href="#" class="image-container">
                 <div class="position-relative">
@@ -601,7 +601,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 product" data-category="vucut-bakim">
+          <div class="col-md-4 product best-seller" data-category="vucut-bakim">
             <div class="product-container">
               <a href="#" class="image-container">
                 <div class="position-relative">
@@ -622,7 +622,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 product" data-category="vucut-bakim">
+          <div class="col-md-4 product best-seller" data-category="vucut-bakim">
             <div class="product-container">
               <a href="#" class="image-container">
                 <div class="position-relative">
@@ -635,7 +635,7 @@
                   />
                 </div>
               </a>
-              <div class="product-detail">
+              <div class="product-detail best-seller">
                 <a href="#" class="product-name"
                   >The Purest Solutions - Invisible Uv</a
                 >
@@ -646,14 +646,6 @@
         </div>
       </div>
     </div>
-    <script>
-      // ürünler var.larda toplanacak tek tek, ardından yalnızca onlar gösterilecek
-      // baslangıcta yalnızca cilt bakim gosterılecek
-      let ciltUrunleri = $(".product");
-      $(function () {
-        $(".bs-cilt-bakimi").on("click", function () {});
-      });
-    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

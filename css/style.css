@@ -54,13 +54,10 @@ a {
     padding-bottom: 3svh
 }
 
-.btn-success {
-    background-color: #5d3b4d;
+.btn, .btn:hover, .btn:active {
+    background-color: #5d3b4d !important;
     border: none;
-}
-
-.btn-success:hover, .btn-success:active, .btn-success:visited, .btn-success:focus {
-    background-color: rgba(125, 1, 125, 0.715);
+    color: white !important
 }
 
 .basket {

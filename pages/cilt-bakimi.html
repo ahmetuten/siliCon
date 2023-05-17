@@ -39,7 +39,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href="/pages/index.html"
         ><img src="../images/logo.png" alt="" width="75"
       /></a>
       <button
@@ -121,6 +121,7 @@
             </div>
           </div>
         </div>
+        <!-- Filters -->
         <div class="col-md-3 filters">
           <div class="row">
             <!-- Ingredients Filter -->
@@ -201,9 +202,7 @@
                 </ul>
               </form>
             </div>
-            <button class="btn btn-success removeFilters">
-              Filtreleri Kaldır
-            </button>
+            <button class="btn removeFilters">Filtreleri Kaldır</button>
           </div>
         </div>
         <!-- Products -->
@@ -213,6 +212,7 @@
               <div class="category"><h4 class="bold">Cilt Bakımı</h4></div>
               <div class="items-found"></div>
             </div>
+            <!-- Added to Favorites Modal -->
             <div class="modal fade" tabindex="-1" id="favModal" role="dialog">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -245,6 +245,7 @@
                 </div>
               </div>
             </div>
+            <!-- Added to Cart Modal -->
             <div
               class="modal fade"
               id="exampleModal"
@@ -284,6 +285,7 @@
                 </div>
               </div>
             </div>
+            <!-- Products -->
             <div class="col-md-4 product" data-category="gycolic-acid">
               <div class="product-container">
                 <a href="#" class="image-container" onclick="return false;">
@@ -295,9 +297,7 @@
                       height="400"
                     />
                     <div class="fav">
-                      <span data-toggle="modal" data-target="#favModal"
-                        ><i class="fa-xl fa-regular fa-heart"></i
-                      ></span>
+                      <span><i class="fa-xl fa-regular fa-heart"></i></span>
                     </div>
                   </div>
                 </a>
@@ -309,7 +309,7 @@
                 </div>
                 <button
                   data-product-id="1"
-                  class="addcart w-100 btn btn-success"
+                  class="addcart w-100 btn"
                   data-toggle="modal"
                   data-target="#exampleModal"
                 >
@@ -328,6 +328,9 @@
                       height="400"
                       style="overflow: hidden"
                     />
+                    <div class="fav">
+                      <span><i class="fa-xl fa-regular fa-heart"></i></span>
+                    </div>
                   </div>
                 </a>
                 <div class="product-detail">
@@ -338,7 +341,7 @@
                 </div>
                 <button
                   data-product-id="2"
-                  class="addcart w-100 btn btn-success"
+                  class="addcart w-100 btn"
                   data-toggle="modal"
                   data-target="#exampleModal"
                 >
@@ -356,6 +359,9 @@
                       width="300"
                       height="400"
                     />
+                    <div class="fav">
+                      <span><i class="fa-xl fa-regular fa-heart"></i></span>
+                    </div>
                   </div>
                 </a>
                 <div class="product-detail">
@@ -366,7 +372,7 @@
                 </div>
                 <button
                   data-product-id="3"
-                  class="addcart btn btn-success w-100"
+                  class="addcart btn w-100"
                   data-toggle="modal"
                   data-target="#exampleModal"
                 >
@@ -385,6 +391,9 @@
                       height="400"
                       style="overflow: hidden"
                     />
+                    <div class="fav">
+                      <span><i class="fa-xl fa-regular fa-heart"></i></span>
+                    </div>
                   </div>
                 </a>
                 <div class="product-detail">
@@ -395,7 +404,7 @@
                 </div>
                 <button
                   data-product-id="2"
-                  class="addcart w-100 btn btn-success"
+                  class="addcart w-100 btn"
                   data-toggle="modal"
                   data-target="#exampleModal"
                 >
@@ -414,6 +423,9 @@
                       height="400"
                       style="overflow: hidden"
                     />
+                    <div class="fav">
+                      <span><i class="fa-xl fa-regular fa-heart"></i></span>
+                    </div>
                   </div>
                 </a>
                 <div class="product-detail">
@@ -424,7 +436,7 @@
                 </div>
                 <button
                   data-product-id="2"
-                  class="addcart w-100 btn btn-success"
+                  class="addcart w-100 btn"
                   data-toggle="modal"
                   data-target="#exampleModal"
                 >
@@ -443,6 +455,9 @@
                       height="400"
                       style="overflow: hidden"
                     />
+                    <div class="fav">
+                      <span><i class="fa-xl fa-regular fa-heart"></i></span>
+                    </div>
                   </div>
                 </a>
                 <div class="product-detail">
@@ -453,7 +468,7 @@
                 </div>
                 <button
                   data-product-id="2"
-                  class="addcart w-100 btn btn-success"
+                  class="addcart w-100 btn"
                   data-toggle="modal"
                   data-target="#exampleModal"
                 >
@@ -465,6 +480,9 @@
         </div>
       </div>
     </div>
+    <script>
+      $(".product").css("margin", "2svh 0");
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

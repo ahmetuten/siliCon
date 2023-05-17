@@ -52,9 +52,9 @@ $(function () {
   });
 
 // mini sepetteki sil butonu işlevleri
-  $(".dropdown-menu").on("click", function (e) {
-    return false;
-  });
+  // $(".dropdown-menu").on("click", function (e) {
+  //   return false;
+  // });
 
   // grid change butonları
   $(".grid-4").on("click", function () {
@@ -107,9 +107,10 @@ $(function () {
   // favoriye ekleme
   $(".fav .fa-heart").on("click", function () {
     $(this).toggleClass("fa-regular fa-solid");
-    $(this).hasClass("fa-solid") ? $(".fav span").preventDefault(): pass;
+    if($(this).hasClass("fa-solid")) {$('#favModal').modal('show')};
   });
 
+  // products slider
   var itemsMainDiv = ('.MultiCarousel');
   var itemsDiv = ('.MultiCarousel-inner');
   var itemWidth = "";
@@ -211,5 +212,40 @@ $(function () {
       ResCarousel(ell, Parent, slide);
   }
 
+  // en cok satan urunler
+  $(window).on("load", function () { 
+    $(".product.best-seller").filter(function () {
+      return $(this).data("category") !== "cilt-bakim";
+    }).hide();
+  });
 
+  $(".bs-cilt-bakimi").on("click", function () { 
+    $(".product.best-seller").filter(function () {
+      return $(this).data("category") !== "cilt-bakim";
+    }).fadeOut();
+    $(".product.best-seller").filter(function () {  
+      return $(this).data("category") === "cilt-bakim"
+    }).fadeIn();
+  });
+
+  $(".bs-sac-bakimi").on("click", function () { 
+    $(".product.best-seller").filter(function () {
+      return $(this).data("category") !== "sac-bakim";
+    }).fadeOut();
+    $(".product.best-seller").filter(function () {  
+      return $(this).data("category") === "sac-bakim"
+    }).fadeIn();
+  });
+
+  $(".bs-vucut-bakimi").on("click", function () { 
+    $(".product.best-seller").filter(function () {
+      return $(this).data("category") !== "vucut-bakim";
+    }).fadeOut();
+    $(".product.best-seller").filter(function () {  
+      return $(this).data("category") === "vucut-bakim"
+    }).fadeIn();
+  });
+
+
+  
 });
