@@ -8,8 +8,8 @@ $(function () {
   // sepet boşsa yazı
   function basketEmpty() {
   if ($(".dropdown-menu").children(".basketItem").length === 0){
-      $(".divider, .cart-total-div").addClass("d-none")
-      $(".dropdown-menu").prepend("<p class='empty' style='text-align:center; padding-top:2svh'> Sepetinizde ürün bulunmamaktadır. </p>")
+    $(".divider, .cart-total-div").addClass("d-none");
+    $(".dropdown-menu").prepend("<p class='empty' style='text-align:center; padding-top:2svh'> Sepetinizde ürün bulunmamaktadır. </p>")
     }
   }
 
@@ -51,11 +51,6 @@ $(function () {
 
   });
 
-// mini sepetteki sil butonu işlevleri
-  // $(".dropdown-menu").on("click", function (e) {
-  //   return false;
-  // });
-
   // grid change butonları
   $(".grid-4").on("click", function () {
     $(".col-md-9 .col-md-4").addClass("col-md-3").removeClass("col-md-4");
@@ -82,7 +77,6 @@ $(function () {
   function filterProducts(filters) {
     $(".products-row .product").hide();
     filters.forEach(function(filter) {
-
     $(".products-row .product[data-category='" + filter + "']").show();
     })
   };
