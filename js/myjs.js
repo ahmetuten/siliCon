@@ -246,6 +246,18 @@ $(function () {
     }).fadeIn();
   });
 
+  // mini sepet - bs dropdown hide özelligini kaldır
+  $(document).on('click', '.dropdown-menu', function (e) {
+    e.stopPropagation();
+  });
 
-  
+  // mini sepet - ürünü sepetten kaldır
+  let $dropdownMenu = $(".dropdown-menu");
+  $dropdownMenu.delegate(".deleteItem", "click", function (e) {
+    // console.log(this.closest('.basketItem'))
+    e.stopPropagation();
+    this.closest(".basketItem").remove();
+    updateBasketCount();
+    basketEmpty();
+  });
 });

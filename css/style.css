@@ -198,3 +198,7 @@ body {
     margin: 0 auto;
     height: 300px;
 }
+
+.dropdown-menu.removeItem {
+    pointer-events: none !important;
+}
