@@ -51,6 +51,25 @@ $(function () {
 
   });
 
+  // mini sepet - bs dropdown hide özelligini kaldır
+  $(document).on('click', '.dropdown-menu', function (e) {
+    e.stopPropagation();
+  });
+
+  // mini sepet - ürünü sepetten kaldır
+  let $dropdownMenu = $(".dropdown-menu");
+  $dropdownMenu.delegate(".deleteItem", "click", function (e) {
+    // console.log(this.closest('.basketItem'))
+    e.stopPropagation();
+    this.closest(".basketItem").remove();
+    updateBasketCount();
+    basketEmpty();
+    let deletedPrice = parseFloat($(this).parent().parent().find(".eachPrice").text())
+    console.log(deletedPrice)
+    cartTotal = cartTotal - deletedPrice
+    $(".cart-total").text(cartTotal + "TL");
+  });
+
   // grid change butonları
   $(".grid-4").on("click", function () {
     $(".col-md-9 .col-md-4").addClass("col-md-3").removeClass("col-md-4");
@@ -213,6 +232,7 @@ $(function () {
     }).hide();
   });
 
+  // en cok satan urunler butonları
   $(".bs-cilt-bakimi").on("click", function () { 
     $(".product.best-seller").filter(function () {
       return $(this).data("category") !== "cilt-bakim";
@@ -240,18 +260,14 @@ $(function () {
     }).fadeIn();
   });
 
-  // mini sepet - bs dropdown hide özelligini kaldır
-  $(document).on('click', '.dropdown-menu', function (e) {
-    e.stopPropagation();
-  });
+  // enter tuşu fonksiyonu
+  function enterKeyPress(input, button) {  
+    $(input).keyup(function (e) {  
+      if(e.keyCode == 13){
+        $(button).click();
+      }
+    })
+  };
 
-  // mini sepet - ürünü sepetten kaldır
-  let $dropdownMenu = $(".dropdown-menu");
-  $dropdownMenu.delegate(".deleteItem", "click", function (e) {
-    // console.log(this.closest('.basketItem'))
-    e.stopPropagation();
-    this.closest(".basketItem").remove();
-    updateBasketCount();
-    basketEmpty();
-  });
+  enterKeyPress("#newsletter", ".news");
 });

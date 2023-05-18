@@ -202,3 +202,7 @@ body {
 .dropdown-menu.removeItem {
     pointer-events: none !important;
 }
+
+.footer {
+    background-color: rgba(192, 193,191, 0.2);
+}
